@@ -1,4 +1,4 @@
 demo
 ====
 
-git demo
+MVC web app demo
