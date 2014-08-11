@@ -10,8 +10,8 @@
 <div>
     <b>Total number of films: </b> @Model.TotalNumber
 </div>
-<ul>
+<table class="table table-striped">
     @foreach (var name in Model.Names) {
-        <ol>@name</ol>
+        <tr><td>@name</td></tr>
     }
-</ul>
+</table>

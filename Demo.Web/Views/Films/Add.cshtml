@@ -1,0 +1,39 @@
+﻿@using Demo.Core.Models
+@model Film
+
+@{
+    ViewBag.Title = "Add new film";
+}
+
+<h2>Add a film</h2>
+
+@using (Html.BeginForm(MVC.Films.Add(), FormMethod.Post)) {
+    @Html.ValidationMessage("")
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Genre)
+        @Html.TextBoxFor(m => m.Genre)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Language)
+        @Html.TextBoxFor(m => m.Language)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.PriceInPence)
+        @Html.TextBoxFor(m => m.PriceInPence)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Length)
+        @Html.TextBoxFor(m => m.Length)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Description)
+        @Html.TextAreaFor(m => m.Description)
+    </div>
+
+    <input class="btn btn-success" id="submit" type="submit" value="Submit" />
+}
