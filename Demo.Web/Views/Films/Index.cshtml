@@ -1,0 +1,17 @@
+﻿@using Demo.Web.Models
+@model FilmsListViewModel
+
+@{
+    ViewBag.Title = "List of Films";
+}
+
+<h2>List of Films</h2>
+
+<div>
+    <b>Total number of films: </b> @Model.TotalNumber
+</div>
+<ul>
+    @foreach (var name in Model.Names) {
+        <ol>@name</ol>
+    }
+</ul>

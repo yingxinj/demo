@@ -25,6 +25,7 @@ using T4MVC;
 [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
 public static partial class MVC
 {
+    public static Demo.Web.Controllers.FilmsController Films = new Demo.Web.Controllers.T4MVC_FilmsController();
     public static Demo.Web.Controllers.HomeController Home = new Demo.Web.Controllers.T4MVC_HomeController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }
