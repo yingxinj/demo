@@ -56,14 +56,13 @@
     <Compile Include="DemoContext.cs" />
     <Compile Include="DemoInitializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Repository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201408111837520_InitialCreate.resx">
       <DependentUpon>201408111837520_InitialCreate.cs</DependentUpon>
