@@ -8,5 +8,7 @@
         public DemoContext() : base("DefaultConnection") {}
 
         public DbSet<Kitten> Kittens { get; set; }
+
+        public DbSet<Film> Films { get; set; }
     }
 }
