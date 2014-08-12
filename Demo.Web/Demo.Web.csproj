@@ -182,6 +182,7 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Models\EnglishFilmsViewModel.cs" />
     <Compile Include="Controllers\FilmsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="FilmsController.generated.cs">
@@ -247,6 +248,7 @@
     </None>
     <Content Include="Views\Films\Index.cshtml" />
     <Content Include="Views\Films\Add.cshtml" />
+    <Content Include="Views\Films\Eng.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
