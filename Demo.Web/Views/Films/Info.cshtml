@@ -1,0 +1,36 @@
+﻿@using Demo.Core.Models
+@model Film
+
+@{
+    ViewBag.Title = @Model.Name;
+}
+
+<h2>@Model.Name</h2>
+<div>
+    <table class="table table-striped">
+        <tr>
+            <td>Price in pence: </td>
+            <td>@Model.PriceInPence</td>
+        </tr>
+        <tr>
+            <td>Genre: </td>
+            <td>@Model.Genre</td>
+        </tr>
+        <tr>
+            <td>Language: </td>
+            <td>@Model.Language</td>
+        </tr>
+        <tr>
+            <td>Length: </td>
+            <td>@Model.Length</td>
+        </tr>
+        <tr>
+            <td>Time updated: </td>
+            <td>@Model.TimeUpdated</td>
+        </tr>
+        <tr>
+            <td>Description: </td>
+            <td>@Model.Description</td>
+        </tr>
+    </table>
+</div>

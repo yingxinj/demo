@@ -16,6 +16,12 @@
             this.repo = repo;
         }
 
+        public virtual ActionResult Info(string filmName)
+        {
+            var film = repo.GetAll().First(f => f.Name == filmName);
+            return View(film);
+        }
+
         public virtual ActionResult Index()
         {
             var model = new FilmsListViewModel

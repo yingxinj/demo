@@ -54,6 +54,12 @@ namespace Demo.Web.Controllers
             return RedirectToActionPermanent(taskResult.Result);
         }
 
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult Info()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Info);
+        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public FilmsController Actions { get { return MVC.Films; } }
@@ -70,6 +76,7 @@ namespace Demo.Web.Controllers
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNamesClass
         {
+            public readonly string Info = "Info";
             public readonly string Index = "Index";
             public readonly string Add = "Add";
         }
@@ -77,11 +84,20 @@ namespace Demo.Web.Controllers
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
+            public const string Info = "Info";
             public const string Index = "Index";
             public const string Add = "Add";
         }
 
 
+        static readonly ActionParamsClass_Info s_params_Info = new ActionParamsClass_Info();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_Info InfoParams { get { return s_params_Info; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_Info
+        {
+            public readonly string filmName = "filmName";
+        }
         static readonly ActionParamsClass_Add s_params_Add = new ActionParamsClass_Add();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ActionParamsClass_Add AddParams { get { return s_params_Add; } }
@@ -102,9 +118,11 @@ namespace Demo.Web.Controllers
             {
                 public readonly string Add = "Add";
                 public readonly string Index = "Index";
+                public readonly string Info = "Info";
             }
             public readonly string Add = "~/Views/Films/Add.cshtml";
             public readonly string Index = "~/Views/Films/Index.cshtml";
+            public readonly string Info = "~/Views/Films/Info.cshtml";
         }
     }
 
@@ -112,6 +130,18 @@ namespace Demo.Web.Controllers
     public partial class T4MVC_FilmsController : Demo.Web.Controllers.FilmsController
     {
         public T4MVC_FilmsController() : base(Dummy.Instance) { }
+
+        [NonAction]
+        partial void InfoOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string filmName);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult Info(string filmName)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Info);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "filmName", filmName);
+            InfoOverride(callInfo, filmName);
+            return callInfo;
+        }
 
         [NonAction]
         partial void IndexOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);

@@ -247,6 +247,7 @@
     </None>
     <Content Include="Views\Films\Index.cshtml" />
     <Content Include="Views\Films\Add.cshtml" />
+    <Content Include="Views\Films\Info.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
