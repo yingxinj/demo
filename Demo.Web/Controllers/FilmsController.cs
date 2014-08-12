@@ -18,7 +18,7 @@
 
         public virtual ActionResult Info(string filmName)
         {
-            var film = repo.GetAll().First(f => f.Name == filmName);
+            var film = repo.GetAll().FirstOrDefault(f => f.Name == filmName);
             return View(film);
         }
 
