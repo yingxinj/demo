@@ -1,0 +1,15 @@
+﻿@using Demo.Web.Models
+@model EnglishFilmsViewModel
+
+@{
+    ViewBag.Title = "English Films";
+}
+<h2>English Films</h2>
+<div>
+    <b>Total price of english films: </b> £ @Model.TotalPrice
+</div>
+<table class="table table-striped">
+    @foreach (var film in Model.FilmPrices) {
+        <tr><td>@film.Key</td><td>£@film.Value</td></tr>
+    }
+</table>

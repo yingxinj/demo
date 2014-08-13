@@ -78,6 +78,7 @@ namespace Demo.Web.Controllers
         {
             public readonly string Info = "Info";
             public readonly string Index = "Index";
+            public readonly string Eng = "Eng";
             public readonly string Add = "Add";
         }
 
@@ -86,6 +87,7 @@ namespace Demo.Web.Controllers
         {
             public const string Info = "Info";
             public const string Index = "Index";
+            public const string Eng = "Eng";
             public const string Add = "Add";
         }
 
@@ -117,10 +119,12 @@ namespace Demo.Web.Controllers
             public class _ViewNamesClass
             {
                 public readonly string Add = "Add";
+                public readonly string Eng = "Eng";
                 public readonly string Index = "Index";
                 public readonly string Info = "Info";
             }
             public readonly string Add = "~/Views/Films/Add.cshtml";
+            public readonly string Eng = "~/Views/Films/Eng.cshtml";
             public readonly string Index = "~/Views/Films/Index.cshtml";
             public readonly string Info = "~/Views/Films/Info.cshtml";
         }
@@ -151,6 +155,17 @@ namespace Demo.Web.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Index);
             IndexOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void EngOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult Eng()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Eng);
+            EngOverride(callInfo);
             return callInfo;
         }
 

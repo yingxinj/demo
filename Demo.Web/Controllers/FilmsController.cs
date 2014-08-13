@@ -31,6 +31,14 @@
             return View(model);
         }
 
+        public virtual ActionResult Eng()
+        {
+            var filmPrices = repo.GetEnglishFilms().ToDictionary(film => film.Name, film => film.PriceInPence / 100);
+            var model = new EnglishFilmsViewModel(filmPrices);
+
+            return View(model);
+        }
+
         [HttpGet]
         public virtual ActionResult Add()
         {
