@@ -12,6 +12,6 @@
 </div>
 <table class="table table-striped">
     @foreach (var name in Model.Names) {
-        <tr><td>@name</td></tr>
+        <tr><td>@Html.ActionLink(name, MVC.Films.Info(name))</td></tr>
     }
 </table>
